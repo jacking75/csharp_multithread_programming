@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/2010/manifest">
+  <Identity Name="b375fbe5-1135-4f77-b0d1-8c1124a16b5c" Publisher="CN=Eugene" Version="1.0.0.0" />
+  <Properties>
+    <DisplayName>Recipe3</DisplayName>
+    <PublisherDisplayName>Eugene</PublisherDisplayName>
+    <Logo>Assets\StoreLogo.png</Logo>
+  </Properties>
+  <Prerequisites>
+    <OSMinVersion>6.2.1</OSMinVersion>
+    <OSMaxVersionTested>6.2.1</OSMaxVersionTested>
+  </Prerequisites>
+  <Resources>
+    <Resource Language="x-generate" />
+  </Resources>
+  <Applications>
+    <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="Recipe3.App">
+      <VisualElements DisplayName="Recipe3" Logo="Assets\Logo.png" SmallLogo="Assets\SmallLogo.png" Description="Recipe3" ForegroundText="light" BackgroundColor="#464646">
+        <LockScreen Notification="badge" BadgeLogo="Assets\SmallLogo-Badge.png" />
+        <DefaultTile ShowName="allLogos" />
+        <SplashScreen Image="Assets\SplashScreen.png" />
+      </VisualElements>
+      <Extensions>
+        <Extension Category="windows.backgroundTasks" EntryPoint="Chapter11.Recipe3.TileSchedulerTask">
+          <BackgroundTasks>
+            <Task Type="systemEvent" />
+            <Task Type="timer" />
+          </BackgroundTasks>
+        </Extension>
+      </Extensions>
+    </Application>
+  </Applications>
+  <Capabilities>
+    <Capability Name="internetClient" />
+  </Capabilities>
+</Package>
